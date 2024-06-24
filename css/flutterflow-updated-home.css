@@ -90,8 +90,7 @@ a {
 }
 
 .column {
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline: auto;
     display: block;
 }
 
@@ -4235,7 +4234,7 @@ a {
         height: 540px;
     }
 
-    
+
     .heading-15 {
         font-family: Productsans, sans-serif;
     }
@@ -6527,7 +6526,7 @@ a {
         line-height: 50px;
     }
 
-    
+
     .heading.heading-large-78px.textleft {
         font-size: 64px;
         line-height: 72px;
