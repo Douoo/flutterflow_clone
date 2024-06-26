@@ -1,6 +1,13 @@
-const tabMenu = document.querySelector(".w-tab-menu");
+const tabMenus = document.querySelectorAll(".tabs-menu");
 
-tabMenu.addEventListener("click", function (e) {
-  const el = e.target;
-  console.log(el.classList.contains("tab-link"));
+tabMenus.forEach((tab) => {
+  tab.addEventListener("click", function (e) {
+    const el = e.target.parentElement.parentElement;
+
+    if (el.classList.contains("tab-link")) {
+      const selectedTab = tab.querySelector(".w--current");
+      selectedTab.classList.remove("w--current");
+      el.classList.add("w--current");
+    }
+  });
 });
