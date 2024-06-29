@@ -27,14 +27,21 @@
       >
         <div class="full">
           <div class="container-fluid nav w-container">
-            <a href="#" class="w-nav-brand"
+            <a href="/" class="w-nav-brand"
               ><img
                 src="images/logo_primary_color.svg"
                 loading="lazy"
                 alt="FlutterFlow Logo Vector (on dark)"
                 class="image-3"
             /></a>
-            <nav role="navigation" class="nav-menu w-clearfix w-nav-menu">
+            <nav
+              role="navigation"
+              class="nav-menu w-clearfix w-nav-menu"
+              style="
+                transition: all;
+                transform: translateY(0px) translateX(0px);
+              "
+            >
               <div class="navfloatright">
                 <a href="features.html" class="nav_link white w-nav-link"
                   >Features</a
@@ -77,6 +84,12 @@
               <div class="icon-5 w-icon-nav-menu"></div>
             </div>
           </div>
+          <div
+            class="w-nav-overlay"
+            data-wf-ignore=""
+            id="w-nav-overlay-0"
+            style="display: none"
+          ></div>
         </div>
       </div>
     </div>
