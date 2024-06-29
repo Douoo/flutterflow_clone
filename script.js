@@ -1,3 +1,4 @@
+console.log("jflskjflksjflskjfkl");
 const navMenu = document.querySelector(".nav-menu");
 
 navMenu.addEventListener("click", () => {
@@ -76,4 +77,14 @@ const testimonialsSwipe = new Swiper(".testimonials", {
   scrollbar: {
     el: ".swiper-scrollbar",
   },
+});
+
+let menu = document.querySelector("#menu-icon");
+let bottomNav = document.querySelector(".bottom-nav");
+
+menu.onClick = () => {};
+menu.addEventListener("click", () => {
+  menu.classList.toggle("ri-menu-fill");
+  menu.classList.toggle("ri-close-fill");
+  bottomNav.classList.toggle("open");
 });
