@@ -160,7 +160,10 @@ a {
 
   .bottom-price-nav a {
     color: white;
-    margin-bottom: 1.5rem;
+  }
+
+  .bottom-price-nav .outline-light.w-nav-link {
+    color: white;
   }
 }
 
@@ -225,10 +228,8 @@ a {
   color: var(--dark-600);
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 8px;
-  border: 2px solid rgba(255, 255, 255, 0.1);
   margin-top: 8px;
   padding: 12px 24px;
-  color: white;
 }
 
 .nav_link.outline-light:hover {
@@ -5921,6 +5922,7 @@ a {
     backdrop-filter: blur(30px);
     color: white;
   }
+
   .bottom-price-nav {
     display: none;
     flex-direction: column;
@@ -5944,6 +5946,7 @@ a {
     color: white;
     display: flex;
   }
+
   .bottom-price-nav.open {
     padding-top: 50px;
     z-index: 10;
@@ -5957,6 +5960,7 @@ a {
     width: 100%;
     color: white;
   }
+
   .nav_link {
     color: #fff;
     margin-left: 30px;
