@@ -11,10 +11,10 @@
 
     <link href="css/normalize.css" rel="stylesheet" type="text/css" />
     <link href="css/components.css" rel="stylesheet" type="text/css" />
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
     <link
-      href="css/flutterflow-updated-home.css"
       rel="stylesheet"
-      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
     <style>
@@ -36,6 +36,39 @@
         width: 60px !important;
         background: white;
         top: 3px;
+      }
+
+      .swiper {
+        position: relative;
+        width: min(1300px, 95%);
+        height: 480px;
+      }
+
+      /* .swiper-btns {
+        position: absolute;
+        right: 0;
+        bottom: 1rem;
+        max-width: 100px;
+        background: red;
+      } */
+      .swiper-button-prev,
+      .swiper-button-next {
+        position: relative;
+        top: 1rem;
+        z-index: 10;
+        margin-bottom: 0;
+        display: inline-flex;
+      }
+      .swiper-button-prev::after,
+      .swiper-button-next::after {
+        content: none;
+      }
+
+      .swiper-pagination-bullet {
+        width: 1rem;
+        height: 0.35rem;
+        border-radius: 2rem;
+        background-color: var(--graytext);
       }
     </style>
   </head>
@@ -67,24 +100,14 @@
               <a href="pricing.html" class="nav_link ffdc w-nav-link"
                 >Pricing</a
               >
-              <a
-                href="#"
-                target="_blank"
-                class="nav_link ffdc w-nav-link"
+              <a href="#" target="_blank" class="nav_link ffdc w-nav-link"
                 >Docs</a
               >
-              <a href="#" class="nav_link ffdc w-nav-link"
-                >Enterprise</a
-              >
-              <a
-                href="#"
-                target="_blank"
-                class="nav_link ffdc w-nav-link"
+              <a href="#" class="nav_link ffdc w-nav-link">Enterprise</a>
+              <a href="#" target="_blank" class="nav_link ffdc w-nav-link"
                 >Experts</a
               >
-              <a href="#" class="nav_link ffdc w-nav-link"
-                >Showcase</a
-              >
+              <a href="#" class="nav_link ffdc w-nav-link">Showcase</a>
               <a href="#" class="nav_link ffdc w-nav-link">AI Gen</a>
             </div>
             <div class="navfloatleft ph_3">
@@ -224,18 +247,14 @@
                 class="nav_link ffdc w-nav-link"
                 >Docs</a
               >
-              <a href="#" class="nav_link ffdc w-nav-link"
-                >Enterprise</a
-              >
+              <a href="#" class="nav_link ffdc w-nav-link">Enterprise</a>
               <a
                 href="https://experts.flutterflow.io"
                 target="_blank"
                 class="nav_link ffdc w-nav-link"
                 >Experts</a
               >
-              <a href="#" class="nav_link ffdc w-nav-link"
-                >Showcase</a
-              >
+              <a href="#" class="nav_link ffdc w-nav-link">Showcase</a>
               <a href="#" class="nav_link ffdc w-nav-link">AI Gen</a>
             </div>
             <div class="navfloatleft ph_3">
@@ -693,13 +712,8 @@
               <div class="w-layout-grid grid-team-slider">
                 <div class="image-block">
                   <img
-                    src="images/4fdcc9_ad182115c02d48a286a3e57dd55c8f81~mv2.jpeg.webp"
+                    src="https://i.pravatar.cc/150?img=58"
                     loading="lazy"
-                    sizes="100vw"
-                    srcset="
-                      images/4fdcc9_ad182115c02d48a286a3e57dd55c8f81~mv2.jpeg-p-500.webp 500w,
-                      images/4fdcc9_ad182115c02d48a286a3e57dd55c8f81~mv2.jpeg.webp       800w
-                    "
                     alt="Nick Karwoski -- a Flutterflow user, founder of TAGALONG PRO."
                     class="content-image-cover"
                   />
@@ -772,282 +786,146 @@
           </div>
           <div class="slide-nav w-slider-nav w-round"></div>
         </div>
-        <div class="custom-buttons w-embed w-script">
-          <script>
-            var Webflow = Webflow || [];
-            Webflow.push(function () {
-              var l = $("#flowbaseSlider .w-slider-arrow-left");
-              var r = $("#flowbaseSlider .w-slider-arrow-right");
-              $("#flowbaseSlider")
-                .on("click", ".back-button", function () {
-                  l.trigger("tap");
-                })
-                .on("click", ".next-button", function () {
-                  r.trigger("tap");
-                });
-            });
-          </script>
-        </div>
       </div>
-      <div
-        data-delay="4000"
-        data-animation="slide"
-        class="testimonyslider bgdark-700 w-slider"
-        data-autoplay="false"
-        data-easing="ease-in-out"
-        data-hide-arrows="false"
-        data-disable-swipe="false"
-        data-autoplay-limit="0"
-        data-nav-spacing="8"
-        data-duration="500"
-        data-infinite="true"
-      >
-        <div class="mask w-slider-mask">
-          <div class="slidetestimony w-slide">
-            <div class="w-layout-grid grid_4x1">
-              <div class="quotecard">
-                <div class="newquotecontent w-clearfix">
-                  <div class="newquoteavatarsection">
-                    <img
-                      src="images/blobOrange4x.png"
-                      loading="lazy"
-                      width="180"
-                      alt=""
-                      sizes="(max-width: 479px) 71vw, 180px"
-                      srcset="
-                        images/blobOrange4x-p-500.png 500w,
-                        images/blobOrange4x.png       760w
-                      "
-                    /><img
-                      src="images/testimonial_92x.png"
-                      loading="lazy"
-                      width="140"
-                      alt=""
-                      class="useravatar"
-                    />
-                  </div>
-                  <h3 class="heading-15">Ganesh SP</h3>
-                  <p class="tertiarytext centertext">Engineering - Atlassian</p>
-                  <p class="paragraph_italic centertext graysmall">
-                    &quot;I had quickly created a working demo of an app in 2
-                    hours and got a major deal thanks to @flutterflow.&quot;
-                  </p>
+    </div>
+    <div
+      data-delay="4000"
+      data-animation="slide"
+      class="testimonyslider bgdark-700 w-slider"
+      data-autoplay="false"
+      data-easing="ease-in-out"
+      data-hide-arrows="false"
+      data-disable-swipe="false"
+      data-autoplay-limit="0"
+      data-nav-spacing="8"
+      data-duration="500"
+      data-infinite="true"
+    >
+      <div class="mask w-slider-mask">
+        <div class="swiper | slidetestimony w-slide">
+          <div class="swiper-wrapper | w-layout-grid grid_4x1">
+            <div class="swiper-slide quotecard">
+              <div class="newquotecontent w-clearfix">
+                <div class="newquoteavatarsection">
+                  <img
+                    src="images/blobOrange4x.png"
+                    loading="lazy"
+                    width="180"
+                    alt=""
+                    sizes="(max-width: 479px) 75vw, 180px"
+                    srcset="
+                      images/blobOrange4x-p-500.png 500w,
+                      images/blobOrange4x.png       760w
+                    "
+                  />
+                  <img
+                    src="https://i.pravatar.cc/150?30"
+                    loading="lazy"
+                    width="140"
+                    alt=""
+                    class="useravatar"
+                  />
                 </div>
-              </div>
-              <div class="quotecard">
-                <div class="newquotecontent w-clearfix">
-                  <div class="newquoteavatarsection">
-                    <img
-                      src="images/blobGreen4x.png"
-                      loading="lazy"
-                      width="180"
-                      alt=""
-                    /><img
-                      src="images/testimonial_102x.png"
-                      loading="lazy"
-                      width="140"
-                      alt=""
-                      class="useravatar"
-                    />
-                  </div>
-                  <h3 class="heading-15">Nick Karwowski</h3>
-                  <p class="tertiarytext centertext">Founder - TAGALONG</p>
-                  <p class="paragraph_italic centertext graysmall">
-                    &quot;We’ve gone from feeling helpless about our platform to
-                    feeling hopeful about our future in a manner of weeks. It’s
-                    a little premature to say, but FlutterFlow might have saved
-                    our business.&quot;
-                  </p>
-                </div>
-              </div>
-              <div class="quotecard">
-                <div class="newquotecontent w-clearfix">
-                  <div class="newquoteavatarsection">
-                    <img
-                      src="images/blobOrange4x.png"
-                      loading="lazy"
-                      width="180"
-                      alt=""
-                      sizes="(max-width: 479px) 75vw, 180px"
-                      srcset="
-                        images/blobOrange4x-p-500.png 500w,
-                        images/blobOrange4x.png       760w
-                      "
-                    /><img
-                      src="images/testimonial_142x.png"
-                      loading="lazy"
-                      width="140"
-                      alt=""
-                      class="useravatar"
-                    />
-                  </div>
-                  <h3 class="heading-15">Graciela Carrillo</h3>
-                  <p class="tertiarytext centertext">Founder</p>
-                  <p class="paragraph_italic centertext graysmall">
-                    “I feel like I know exactly what product-market fit feels
-                    like from the user side thanks to them.”
-                  </p>
-                </div>
-              </div>
-              <div class="quotecard">
-                <div class="newquotecontent w-clearfix">
-                  <div class="newquoteavatarsection">
-                    <img
-                      src="images/blobOrange4x.png"
-                      loading="lazy"
-                      width="180"
-                      alt=""
-                    /><img
-                      src="images/testimonial_72x.png"
-                      loading="lazy"
-                      width="140"
-                      alt=""
-                      class="useravatar"
-                    />
-                  </div>
-                  <h3 class="heading-15">Jos H.</h3>
-                  <p class="tertiarytext centertext">Founder / CEO<br /></p>
-                  <p class="paragraph_italic centertext graysmall">
-                    &quot;There are very few limitations and the team are
-                    amazing with new features and fixes being added on a weekly
-                    basis - incredible!&quot;
-                  </p>
-                </div>
+                <h3 class="heading-15">Ganesh SP</h3>
+                <p class="tertiarytext centertext">Engineering - Atlassian</p>
+                <p class="paragraph_italic centertext graysmall">
+                  &quot;I had quickly created a working demo of an app in 2
+                  hours and got a major deal thanks to @flutterflow.&quot;
+                </p>
               </div>
             </div>
-          </div>
-          <div class="slidetestimony_alt w-slide">
-            <div class="w-layout-grid grid_4x1">
-              <div class="quotecard">
-                <div class="newquotecontent w-clearfix">
-                  <div class="newquoteavatarsection">
-                    <img
-                      src="images/blobOrange4x.png"
-                      loading="lazy"
-                      width="180"
-                      alt=""
-                      sizes="(max-width: 479px) 75vw, 180px"
-                      srcset="
-                        images/blobOrange4x-p-500.png 500w,
-                        images/blobOrange4x.png       760w
-                      "
-                    /><img
-                      src="images/testimonial_62x.png"
-                      loading="lazy"
-                      width="140"
-                      alt=""
-                      class="useravatar"
-                    />
-                  </div>
-                  <h3 class="heading-15">Juan Sebastian R</h3>
-                  <p class="tertiarytext centertext">CEO - Founder</p>
-                  <p class="paragraph_italic centertext graysmall">
-                    &quot;Flutter flow is a great tool that allows you to build
-                    mobile and web applications in a very easy way. It is an
-                    example of the future of low code.&quot;
-                  </p>
+            <div class="swiper-slide quotecard">
+              <div class="newquotecontent w-clearfix">
+                <div class="newquoteavatarsection">
+                  <img
+                    src="images/blobGreen4x.png"
+                    loading="lazy"
+                    width="180"
+                    alt=""
+                  /><img
+                    src="https://i.pravatar.cc/150?48"
+                    loading="lazy"
+                    width="140"
+                    alt=""
+                    class="useravatar"
+                  />
                 </div>
+                <h3 class="heading-15">Nick Karwowski</h3>
+                <p class="tertiarytext centertext">Founder - TAGALONG</p>
+                <p class="paragraph_italic centertext graysmall">
+                  &quot;We’ve gone from feeling helpless about our platform to
+                  feeling hopeful about our future in a manner of weeks. It’s a
+                  little premature to say, but FlutterFlow might have saved our
+                  business.&quot;
+                </p>
               </div>
-              <div class="quotecard">
-                <div class="newquotecontent w-clearfix">
-                  <div class="newquoteavatarsection">
-                    <img
-                      src="images/blobGreen4x.png"
-                      loading="lazy"
-                      width="180"
-                      alt=""
-                    /><img
-                      src="images/testimonial_52x.png"
-                      loading="lazy"
-                      width="140"
-                      alt=""
-                      class="useravatar"
-                    />
-                  </div>
-                  <h3 class="heading-15">Samuel Cousin</h3>
-                  <p class="tertiarytext centertext">NoCode Engineer</p>
-                  <p class="paragraph_italic centertext graysmall">
-                    “Overall, building with FlutterFlow has been interesting and
-                    has enabled me to learn how to build apps with flutter but I
-                    would not sacrifice the time saving aspect of FlutterFlow
-                    for traditional app development.”
-                  </p>
+            </div>
+            <div class="swiper-slide quotecard">
+              <div class="newquotecontent w-clearfix">
+                <div class="newquoteavatarsection">
+                  <img
+                    src="images/blobOrange4x.png"
+                    loading="lazy"
+                    width="180"
+                    alt=""
+                    sizes="(max-width: 479px) 75vw, 180px"
+                    srcset="
+                      images/blobOrange4x-p-500.png 500w,
+                      images/blobOrange4x.png       760w
+                    "
+                  />
+                  <img
+                    src="https://i.pravatar.cc/150"
+                    loading="lazy"
+                    width="140"
+                    alt=""
+                    class="useravatar"
+                  />
                 </div>
+                <h3 class="heading-15">Graciela Carrillo</h3>
+                <p class="tertiarytext centertext">Founder</p>
+                <p class="paragraph_italic centertext graysmall">
+                  “I feel like I know exactly what product-market fit feels like
+                  from the user side thanks to them.”
+                </p>
               </div>
-              <div class="quotecard">
-                <div class="newquotecontent w-clearfix">
-                  <div class="newquoteavatarsection">
-                    <img
-                      src="images/blobPurple4x.png"
-                      loading="lazy"
-                      width="180"
-                      alt=""
-                      sizes="(max-width: 479px) 75vw, 180px"
-                      srcset="
-                        images/blobPurple4x-p-500.png 500w,
-                        images/blobPurple4x.png       760w
-                      "
-                    /><img
-                      src="images/testimonial_42x.png"
-                      loading="lazy"
-                      width="140"
-                      alt=""
-                      class="useravatar"
-                    />
-                  </div>
-                  <h3 class="heading-15">John Jackovin</h3>
-                  <p class="tertiarytext centertext">
-                    Executive Director at BrokerTech Ventures Accelerator &amp;
-                    Co-Founder Armchair
-                  </p>
-                  <p class="paragraph_italic centertext graysmall">
-                    “FlutterFlow allows us to get to market quickly, test,
-                    adjust, and then continue to iterate in very short cycles.
-                    We wouldn’t be anywhere close to where we are today without
-                    FlutterFlow.”
-                  </p>
+            </div>
+            <div class="swiper-slide quotecard">
+              <div class="newquotecontent w-clearfix">
+                <div class="newquoteavatarsection">
+                  <img
+                    src="images/blobGreen4x.png"
+                    loading="lazy"
+                    width="180"
+                    alt=""
+                  /><img
+                    src="https://i.pravatar.cc/150?58"
+                    loading="lazy"
+                    width="140"
+                    alt=""
+                    class="useravatar"
+                  />
                 </div>
-              </div>
-              <div class="quotecard">
-                <div class="newquotecontent w-clearfix">
-                  <div class="newquoteavatarsection">
-                    <img
-                      src="images/blobOrange4x.png"
-                      loading="lazy"
-                      width="180"
-                      alt=""
-                    /><img
-                      src="images/testimonial_132x.png"
-                      loading="lazy"
-                      width="140"
-                      alt=""
-                      class="useravatar"
-                    />
-                  </div>
-                  <h3 class="heading-15">Sirian Maathuis</h3>
-                  <p class="tertiarytext centertext">
-                    Co-Founder / Designer<br />
-                  </p>
-                  <p class="paragraph_italic centertext graysmall">
-                    “FlutterFlow has helped me learn Flutter as well as the
-                    general app building process. It is not as accessible as
-                    some comparable tools, but allows for much more
-                    possibilities. It has helped me build great working apps,
-                    which are 1:1 with my custom design and work very well on
-                    all platforms.”
-                  </p>
-                </div>
+                <h3 class="heading-15">Jos H.</h3>
+                <p class="tertiarytext centertext">Founder / CEO<br /></p>
+                <p class="paragraph_italic centertext graysmall">
+                  &quot;There are very few limitations and the team are amazing
+                  with new features and fixes being added on a weekly basis -
+                  incredible!&quot;
+                </p>
               </div>
             </div>
           </div>
         </div>
-        <div class="left-arrow-2 w-slider-arrow-left">
-          <img src="images/arrow_back5x.png" loading="lazy" width="60" alt="" />
-        </div>
-        <div class="right-arrow-2 w-slider-arrow-right">
-          <img src="images/arrowRight5x.png" loading="lazy" width="44" alt="" />
-        </div>
-        <div class="slide-nav showcase reviews w-slider-nav w-round"></div>
+        <div
+          class="slider-pagination slide-nav showcase reviews w-slider-nav w-round"
+        ></div>
+      </div>
+      <div class="prev-slide left-arrow-3 w-slider-arrow-left">
+        <img width="32" loading="lazy" alt="" src="images/arrow_back5x.png" />
+      </div>
+      <div class="next-slide right-arrow-3 w-slider-arrow-right">
+        <img width="32" loading="lazy" alt="" src="images/arrowRight5x.png" />
       </div>
     </div>
     <div class="sectionpaddingtb bodydark400">
@@ -1103,331 +981,194 @@
           data-duration="300"
           data-infinite="true"
         >
-          <div class="mask-2 w-slider-mask">
-            <div class="w-slide">
-              <div class="slide-wrapper">
-                <div class="w-layout-grid slide-content-grid">
-                  <div
-                    id="w-node-_5f891bad-d5e0-9719-5b80-c3ac0e3ed502-bba7590a"
-                    class="quote-wrapper"
-                  >
-                    <div class="author-wrapper">
-                      <div class="author-name">Sirian M.</div>
-                      <div class="author-role">
-                        Co-Founder <span class="bold-span">GiftIt</span>
+          <div class="testimonials">
+            <div class="swiper-wrapper mask-2 w-slider-mask">
+              <div class="swiper-slide w-slide">
+                <div class="slide-wrapper">
+                  <div class="w-layout-grid slide-content-grid">
+                    <div
+                      id="w-node-_5f891bad-d5e0-9719-5b80-c3ac0e3ed502-bba7590a"
+                      class="quote-wrapper"
+                    >
+                      <div class="author-wrapper">
+                        <div class="author-name">Sirian M.</div>
+                        <div class="author-role">
+                          Co-Founder <span class="bold-span">GiftIt</span>
+                        </div>
                       </div>
-                    </div>
-                    <img
-                      width="26"
-                      loading="lazy"
-                      alt=""
-                      src="images/quote_marks.svg"
-                      class="quote-icon"
-                    />
-                    <p class="quote-paragraph">
-                      <em
-                        >With FlutterFlow’s visual builder, we were able to
-                        quickly and efficiently bring our ideas to life—from
-                        in-app e-commerce to custom chats and social features.
-                        It has allowed us to build with no limitations due to
-                        the ability to add custom code whenever needed. Thanks
-                        to FlutterFlow, we’ve been able to rapidly iterate,
-                        refine and deploy, which is key to gathering user
-                        feedback, and creating a product people actually
-                        want!</em
-                      >
-                    </p>
-                    <div class="w-layout-grid grid-9">
-                      <a
-                        href="https://www.giftit.social"
-                        target="_blank"
-                        class="w-inline-block"
-                        ><img
-                          width="135"
-                          loading="lazy"
-                          alt=""
-                          src="images/app_store_button.svg"
-                          class="appstorebutton" /></a
-                      ><img
-                        sizes="100vw"
-                        srcset="
-                          images/AppDesign_OfYear_2023_onDark2x-p-500.png 500w,
-                          images/AppDesign_OfYear_2023_onDark2x.png       564w
-                        "
-                        alt=""
-                        src="images/AppDesign_OfYear_2023_onDark2x.png"
-                        loading="lazy"
-                      />
-                    </div>
-                  </div>
-                  <div class="image-wrapper-2">
-                    <div class="testimonial-image-base">
                       <img
-                        sizes="100vw"
-                        srcset="
-                          images/FF-Giftit-Mockup-p-500.jpg  500w,
-                          images/FF-Giftit-Mockup-p-800.jpg  800w,
-                          images/FF-Giftit-Mockup.jpg       1080w
-                        "
-                        alt=""
-                        src="images/FF-Giftit-Mockup.jpg"
+                        width="26"
                         loading="lazy"
-                        class="testimonial-image"
+                        alt=""
+                        src="images/quote_marks.svg"
+                        class="quote-icon"
                       />
-                      <div class="rotated-square"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="slide-2 w-slide">
-              <div class="slide-wrapper">
-                <div class="w-layout-grid slide-content-grid">
-                  <div
-                    id="w-node-_9de7e3c5-fc53-956e-af4a-fed64385171f-bba7590a"
-                    class="quote-wrapper"
-                  >
-                    <div class="author-wrapper">
-                      <div class="author-name">Ilya</div>
-                      <div class="author-role">
-                        Co-Founder <span class="bold-span">Appfyl.com</span>
-                      </div>
-                    </div>
-                    <img
-                      width="26"
-                      loading="lazy"
-                      alt=""
-                      src="images/quote_marks.svg"
-                      class="quote-icon"
-                    />
-                    <p class="quote-paragraph">
-                      <em
-                        >We realized that we can’t scale quickly due to
-                        limitations of Adalo at around 4000 users and our client
-                        wanted features that could not be done with this tool,
-                        so I switched to FlutterFlow.&quot;</em
-                      >
-                    </p>
-                    <div class="w-layout-grid grid-9">
-                      <a
-                        href="https://apps.apple.com/us/app/ab-money/id1567820703"
-                        target="_blank"
-                        class="w-inline-block"
-                        ><img
-                          width="135"
-                          loading="lazy"
-                          alt=""
-                          src="images/app_store_button.svg"
-                          class="appstorebutton"
-                      /></a>
-                      <a
-                        href="https://appfyl.com/"
-                        target="_blank"
-                        class="w-inline-block"
+                      <p class="quote-paragraph">
+                        <em
+                          >With FlutterFlow’s visual builder, we were able to
+                          quickly and efficiently bring our ideas to life—from
+                          in-app e-commerce to custom chats and social features.
+                          It has allowed us to build with no limitations due to
+                          the ability to add custom code whenever needed. Thanks
+                          to FlutterFlow, we’ve been able to rapidly iterate,
+                          refine and deploy, which is key to gathering user
+                          feedback, and creating a product people actually
+                          want!</em
+                        >
+                      </p>
+                      <div class="w-layout-grid grid-9">
+                        <a
+                          href="https://www.giftit.social"
+                          target="_blank"
+                          class="w-inline-block"
+                          ><img
+                            width="135"
+                            loading="lazy"
+                            alt=""
+                            src="images/app_store_button.svg"
+                            class="appstorebutton" /></a
                         ><img
                           sizes="100vw"
                           srcset="
-                            images/appOfYear_2023_onDark2x-p-500.png 500w,
-                            images/appOfYear_2023_onDark2x.png       524w
+                            images/AppDesign_OfYear_2023_onDark2x-p-500.png 500w,
+                            images/AppDesign_OfYear_2023_onDark2x.png       564w
                           "
                           alt=""
-                          src="images/appOfYear_2023_onDark2x.png"
+                          src="images/AppDesign_OfYear_2023_onDark2x.png"
                           loading="lazy"
-                      /></a>
-                    </div>
-                  </div>
-                  <div class="image-wrapper-2">
-                    <div class="testimonial-image-base">
-                      <img
-                        sizes="100vw"
-                        srcset="
-                          images/appOf_TheYear_FFDC2x-p-500.jpg   500w,
-                          images/appOf_TheYear_FFDC2x-p-800.jpg   800w,
-                          images/appOf_TheYear_FFDC2x-p-1080.jpg 1080w,
-                          images/appOf_TheYear_FFDC2x-p-1600.jpg 1600w,
-                          images/appOf_TheYear_FFDC2x.jpg        2000w
-                        "
-                        alt=""
-                        src="images/appOf_TheYear_FFDC2x.jpg"
-                        loading="lazy"
-                        class="testimonial-image"
-                      />
-                      <div class="rotated-square"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="slide-2 w-slide">
-              <div class="slide-wrapper">
-                <div class="w-layout-grid slide-content-grid">
-                  <div
-                    id="w-node-d5ee20b4-d331-f733-fad1-fcb13e18350f-bba7590a"
-                    class="quote-wrapper"
-                  >
-                    <div class="author-wrapper">
-                      <div class="author-name">Thomas Coiner</div>
-                      <div class="author-role">
-                        CEO &amp; Founder
-                        <span class="bold-span">ProU Sports</span>
+                        />
                       </div>
                     </div>
-                    <img
-                      width="26"
-                      loading="lazy"
-                      alt=""
-                      src="images/quote_marks.svg"
-                      class="quote-icon"
-                    />
-                    <p class="quote-paragraph">
-                      <em
-                        >FlutterFlow has helped our startup stay incredibly
-                        agile and has kept our costs down. Speed is everything
-                        for us and the ability to develop and iterate our
-                        product based on user experience, not assumptions, is
-                        critical for our success</em
-                      >
-                    </p>
-                    <a
-                      href="https://apps.apple.com/us/app/prou-sports/id1555921824"
-                      target="_blank"
-                      class="w-inline-block"
-                      ><img
-                        width="135"
-                        loading="lazy"
-                        alt=""
-                        src="images/app_store_button.svg"
-                        class="appstorebutton"
-                    /></a>
-                  </div>
-                  <div class="image-wrapper-2">
-                    <div class="testimonial-image-base">
-                      <img
-                        sizes="100vw"
-                        srcset="
-                          images/showcase_ProU2x-p-500.png   500w,
-                          images/showcase_ProU2x-p-800.png   800w,
-                          images/showcase_ProU2x-p-1080.png 1080w,
-                          images/showcase_ProU2x.png        1500w
-                        "
-                        alt=""
-                        src="images/showcase_ProU2x.png"
-                        loading="lazy"
-                        class="testimonial-image"
-                      />
-                      <div class="rotated-square"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="w-slide">
-              <div class="slide-wrapper">
-                <div class="w-layout-grid slide-content-grid">
-                  <div
-                    id="w-node-_7cd770e1-727d-7d8b-b99e-7088f2128116-bba7590a"
-                    class="quote-wrapper"
-                  >
-                    <div class="author-wrapper">
-                      <div class="author-name">Josh</div>
-                      <div class="author-role">
-                        CEO <span class="bold-span">Sparkcharge</span>
-                      </div>
-                    </div>
-                    <img
-                      width="26"
-                      loading="lazy"
-                      alt=""
-                      src="images/quote_marks.svg"
-                      class="quote-icon"
-                    />
-                    <p class="quote-paragraph">
-                      <em
-                        >Building our mobile app on FlutterFlow let us design,
-                        build, and migrate from our previous platform in less
-                        than three months. Since then, we&#x27;ve been able to
-                        quickly add new features without the complexity of
-                        custom code. We love the power and flexibility the
-                        FlutterFlow platform provides with the benefits of Code
-                        and No Code together.</em
-                      >
-                    </p>
-                    <div class="w-layout-grid grid-9">
-                      <a
-                        href="https://apps.apple.com/us/app/currently-ev-charging/id1624940687"
-                        target="_blank"
-                        class="w-inline-block"
-                        ><img
-                          width="135"
-                          loading="lazy"
+                    <div class="image-wrapper-2">
+                      <div class="testimonial-image-base">
+                        <img
+                          sizes="100vw"
+                          srcset="
+                            images/FF-Giftit-Mockup-p-500.jpg  500w,
+                            images/FF-Giftit-Mockup-p-800.jpg  800w,
+                            images/FF-Giftit-Mockup.jpg       1080w
+                          "
                           alt=""
-                          src="images/app_store_button.svg"
-                          class="appstorebutton"
-                      /></a>
-                    </div>
-                  </div>
-                  <div class="image-wrapper-2">
-                    <div class="testimonial-image-base">
-                      <img
-                        sizes="100vw"
-                        srcset="
-                          images/showcase_Currently2x-p-500.png  500w,
-                          images/showcase_Currently2x-p-800.png  800w,
-                          images/showcase_Currently2x.png       1500w
-                        "
-                        alt=""
-                        src="images/showcase_Currently2x.png"
-                        loading="lazy"
-                        class="testimonial-image"
-                      />
-                      <div class="rotated-square"></div>
+                          src="images/FF-Giftit-Mockup.jpg"
+                          loading="lazy"
+                          class="testimonial-image"
+                        />
+                        <div class="rotated-square"></div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="w-slide">
-              <div class="slide-wrapper">
-                <div class="w-layout-grid slide-content-grid">
-                  <div
-                    id="w-node-_941a4bb7-8df9-f2b2-33cb-2471008810f1-bba7590a"
-                    class="quote-wrapper"
-                  >
-                    <div class="author-wrapper">
-                      <div class="author-name">Vetri</div>
-                      <div class="buttonarea_flex alignleft">
-                        <a
-                          href="https://www.atlasfin.com"
-                          target="_blank"
-                          class="bold-span"
-                          >Atlas</a
+              <div class="swiper-slide slide-2 w-slide">
+                <div class="slide-wrapper">
+                  <div class="w-layout-grid slide-content-grid">
+                    <div
+                      id="w-node-_9de7e3c5-fc53-956e-af4a-fed64385171f-bba7590a"
+                      class="quote-wrapper"
+                    >
+                      <div class="author-wrapper">
+                        <div class="author-name">Ilya</div>
+                        <div class="author-role">
+                          Co-Founder <span class="bold-span">Appfyl.com</span>
+                        </div>
+                      </div>
+                      <img
+                        width="26"
+                        loading="lazy"
+                        alt=""
+                        src="images/quote_marks.svg"
+                        class="quote-icon"
+                      />
+                      <p class="quote-paragraph">
+                        <em
+                          >We realized that we can’t scale quickly due to
+                          limitations of Adalo at around 4000 users and our
+                          client wanted features that could not be done with
+                          this tool, so I switched to FlutterFlow.&quot;</em
                         >
-                        <div class="author-role">CTO &amp; Co-Founder</div>
+                      </p>
+                      <div class="w-layout-grid grid-9">
+                        <a
+                          href="https://apps.apple.com/us/app/ab-money/id1567820703"
+                          target="_blank"
+                          class="w-inline-block"
+                          ><img
+                            width="135"
+                            loading="lazy"
+                            alt=""
+                            src="images/app_store_button.svg"
+                            class="appstorebutton"
+                        /></a>
+                        <a
+                          href="https://appfyl.com/"
+                          target="_blank"
+                          class="w-inline-block"
+                          ><img
+                            sizes="100vw"
+                            srcset="
+                              images/appOfYear_2023_onDark2x-p-500.png 500w,
+                              images/appOfYear_2023_onDark2x.png       524w
+                            "
+                            alt=""
+                            src="images/appOfYear_2023_onDark2x.png"
+                            loading="lazy"
+                        /></a>
                       </div>
                     </div>
-                    <img
-                      width="26"
-                      loading="lazy"
-                      alt=""
-                      src="images/quote_marks.svg"
-                      class="quote-icon"
-                    />
-                    <p class="quote-paragraph">
-                      <em
-                        >Velocity is crucial for a startup. With Flutterflow, we
-                        were able to build and publish our app across iOS,
-                        Android, and Web within a month. It was a delightful
-                        developer experience, the performance was fast/fluid,
-                        and we didn’t have to compromise on any functionality.
-                        Feedback from customers has been terrific — both in
-                        terms of what they say when we talk to them and their
-                        daily usage/engagement. We couldn&#x27;t be more
-                        thrilled with our experience.&quot;</em
-                      >
-                    </p>
-                    <div class="w-layout-grid grid-9">
+                    <div class="image-wrapper-2">
+                      <div class="testimonial-image-base">
+                        <img
+                          sizes="100vw"
+                          srcset="
+                            images/appOf_TheYear_FFDC2x-p-500.jpg   500w,
+                            images/appOf_TheYear_FFDC2x-p-800.jpg   800w,
+                            images/appOf_TheYear_FFDC2x-p-1080.jpg 1080w,
+                            images/appOf_TheYear_FFDC2x-p-1600.jpg 1600w,
+                            images/appOf_TheYear_FFDC2x.jpg        2000w
+                          "
+                          alt=""
+                          src="images/appOf_TheYear_FFDC2x.jpg"
+                          loading="lazy"
+                          class="testimonial-image"
+                        />
+                        <div class="rotated-square"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide slide-2 w-slide">
+                <div class="slide-wrapper">
+                  <div class="w-layout-grid slide-content-grid">
+                    <div
+                      id="w-node-d5ee20b4-d331-f733-fad1-fcb13e18350f-bba7590a"
+                      class="quote-wrapper"
+                    >
+                      <div class="author-wrapper">
+                        <div class="author-name">Thomas Coiner</div>
+                        <div class="author-role">
+                          CEO &amp; Founder
+                          <span class="bold-span">ProU Sports</span>
+                        </div>
+                      </div>
+                      <img
+                        width="26"
+                        loading="lazy"
+                        alt=""
+                        src="images/quote_marks.svg"
+                        class="quote-icon"
+                      />
+                      <p class="quote-paragraph">
+                        <em
+                          >FlutterFlow has helped our startup stay incredibly
+                          agile and has kept our costs down. Speed is everything
+                          for us and the ability to develop and iterate our
+                          product based on user experience, not assumptions, is
+                          critical for our success</em
+                        >
+                      </p>
                       <a
-                        href="https://apps.apple.com/us/app/atlas-modern-credit-card/id1617487581"
+                        href="https://apps.apple.com/us/app/prou-sports/id1555921824"
                         target="_blank"
                         class="w-inline-block"
                         ><img
@@ -1437,58 +1178,199 @@
                           src="images/app_store_button.svg"
                           class="appstorebutton"
                       /></a>
-                      <a
-                        href="https://play.google.com/store/apps/details?id=com.exto.arrow"
-                        target="_blank"
-                        class="w-inline-block"
-                        ><img
-                          width="135"
-                          loading="lazy"
+                    </div>
+                    <div class="image-wrapper-2">
+                      <div class="testimonial-image-base">
+                        <img
+                          sizes="100vw"
+                          srcset="
+                            images/showcase_ProU2x-p-500.png   500w,
+                            images/showcase_ProU2x-p-800.png   800w,
+                            images/showcase_ProU2x-p-1080.png 1080w,
+                            images/showcase_ProU2x.png        1500w
+                          "
                           alt=""
-                          src="images/playStore_button.svg"
-                          class="appstorebutton"
-                      /></a>
+                          src="images/showcase_ProU2x.png"
+                          loading="lazy"
+                          class="testimonial-image"
+                        />
+                        <div class="rotated-square"></div>
+                      </div>
                     </div>
                   </div>
-                  <div class="image-wrapper-2">
-                    <div class="testimonial-image-base">
+                </div>
+              </div>
+              <div class="swiper-slide w-slide">
+                <div class="slide-wrapper">
+                  <div class="w-layout-grid slide-content-grid">
+                    <div
+                      id="w-node-_7cd770e1-727d-7d8b-b99e-7088f2128116-bba7590a"
+                      class="quote-wrapper"
+                    >
+                      <div class="author-wrapper">
+                        <div class="author-name">Josh</div>
+                        <div class="author-role">
+                          CEO <span class="bold-span">Sparkcharge</span>
+                        </div>
+                      </div>
                       <img
-                        sizes="100vw"
-                        srcset="
-                          images/showcase_AtlasApp2x-p-500.png   500w,
-                          images/showcase_AtlasApp2x-p-800.png   800w,
-                          images/showcase_AtlasApp2x-p-1080.png 1080w,
-                          images/showcase_AtlasApp2x.png        1500w
-                        "
-                        alt=""
-                        src="images/showcase_AtlasApp2x.png"
+                        width="26"
                         loading="lazy"
-                        class="testimonial-image"
+                        alt=""
+                        src="images/quote_marks.svg"
+                        class="quote-icon"
                       />
-                      <div class="rotated-square"></div>
+                      <p class="quote-paragraph">
+                        <em
+                          >Building our mobile app on FlutterFlow let us design,
+                          build, and migrate from our previous platform in less
+                          than three months. Since then, we&#x27;ve been able to
+                          quickly add new features without the complexity of
+                          custom code. We love the power and flexibility the
+                          FlutterFlow platform provides with the benefits of
+                          Code and No Code together.</em
+                        >
+                      </p>
+                      <div class="w-layout-grid grid-9">
+                        <a
+                          href="https://apps.apple.com/us/app/currently-ev-charging/id1624940687"
+                          target="_blank"
+                          class="w-inline-block"
+                          ><img
+                            width="135"
+                            loading="lazy"
+                            alt=""
+                            src="images/app_store_button.svg"
+                            class="appstorebutton"
+                        /></a>
+                      </div>
+                    </div>
+                    <div class="image-wrapper-2">
+                      <div class="testimonial-image-base">
+                        <img
+                          sizes="100vw"
+                          srcset="
+                            images/showcase_Currently2x-p-500.png  500w,
+                            images/showcase_Currently2x-p-800.png  800w,
+                            images/showcase_Currently2x.png       1500w
+                          "
+                          alt=""
+                          src="images/showcase_Currently2x.png"
+                          loading="lazy"
+                          class="testimonial-image"
+                        />
+                        <div class="rotated-square"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide w-slide">
+                <div class="slide-wrapper">
+                  <div class="w-layout-grid slide-content-grid">
+                    <div
+                      id="w-node-_941a4bb7-8df9-f2b2-33cb-2471008810f1-bba7590a"
+                      class="quote-wrapper"
+                    >
+                      <div class="author-wrapper">
+                        <div class="author-name">Vetri</div>
+                        <div class="buttonarea_flex alignleft">
+                          <a
+                            href="https://www.atlasfin.com"
+                            target="_blank"
+                            class="bold-span"
+                            >Atlas</a
+                          >
+                          <div class="author-role">CTO &amp; Co-Founder</div>
+                        </div>
+                      </div>
+                      <img
+                        width="26"
+                        loading="lazy"
+                        alt=""
+                        src="images/quote_marks.svg"
+                        class="quote-icon"
+                      />
+                      <p class="quote-paragraph">
+                        <em
+                          >Velocity is crucial for a startup. With Flutterflow,
+                          we were able to build and publish our app across iOS,
+                          Android, and Web within a month. It was a delightful
+                          developer experience, the performance was fast/fluid,
+                          and we didn’t have to compromise on any functionality.
+                          Feedback from customers has been terrific — both in
+                          terms of what they say when we talk to them and their
+                          daily usage/engagement. We couldn&#x27;t be more
+                          thrilled with our experience.&quot;</em
+                        >
+                      </p>
+                      <div class="w-layout-grid grid-9">
+                        <a
+                          href="https://apps.apple.com/us/app/atlas-modern-credit-card/id1617487581"
+                          target="_blank"
+                          class="w-inline-block"
+                          ><img
+                            width="135"
+                            loading="lazy"
+                            alt=""
+                            src="images/app_store_button.svg"
+                            class="appstorebutton"
+                        /></a>
+                        <a
+                          href="https://play.google.com/store/apps/details?id=com.exto.arrow"
+                          target="_blank"
+                          class="w-inline-block"
+                          ><img
+                            width="135"
+                            loading="lazy"
+                            alt=""
+                            src="images/playStore_button.svg"
+                            class="appstorebutton"
+                        /></a>
+                      </div>
+                    </div>
+                    <div class="image-wrapper-2">
+                      <div class="testimonial-image-base">
+                        <img
+                          sizes="100vw"
+                          srcset="
+                            images/showcase_AtlasApp2x-p-500.png   500w,
+                            images/showcase_AtlasApp2x-p-800.png   800w,
+                            images/showcase_AtlasApp2x-p-1080.png 1080w,
+                            images/showcase_AtlasApp2x.png        1500w
+                          "
+                          alt=""
+                          src="images/showcase_AtlasApp2x.png"
+                          loading="lazy"
+                          class="testimonial-image"
+                        />
+                        <div class="rotated-square"></div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+            <div class="prev-slide left-arrow-3 w-slider-arrow-left">
+              <img
+                width="32"
+                loading="lazy"
+                alt=""
+                src="images/arrow_back5x.png"
+              />
+            </div>
+            <div class="next-slide right-arrow-3 w-slider-arrow-right">
+              <img
+                width="32"
+                loading="lazy"
+                alt=""
+                src="images/arrowRight5x.png"
+              />
+            </div>
+            <div
+              class="testimonial-pagination slide-nav showcase w-slider-nav w-round"
+            ></div>
           </div>
-          <div class="left-arrow-3 w-slider-arrow-left">
-            <img
-              width="32"
-              loading="lazy"
-              alt=""
-              src="images/arrow_back5x.png"
-            />
-          </div>
-          <div class="right-arrow-3 w-slider-arrow-right">
-            <img
-              width="32"
-              loading="lazy"
-              alt=""
-              src="images/arrowRight5x.png"
-            />
-          </div>
-          <div class="slide-nav showcase w-slider-nav w-round"></div>
         </div>
       </div>
     </div>
@@ -1557,9 +1439,7 @@
       </div>
       <h2 class="heading-3">🔥 Join over 1.25 million users 🔥</h2>
       <div class="buttonarea_flex">
-        <a href="#" class="btn btn_info w-button"
-          >Start Building</a
-        >
+        <a href="#" class="btn btn_info w-button">Start Building</a>
       </div>
     </div>
     <footer id="footer" class="footer">
@@ -1688,9 +1568,7 @@
                 <a href="#" class="footer-link">Ambassadors</a>
               </li>
               <li>
-                <a href="#" class="footer-link"
-                  >Agencies</a
-                >
+                <a href="#" class="footer-link">Agencies</a>
               </li>
               <li>
                 <a
@@ -1701,9 +1579,7 @@
                 >
               </li>
               <li>
-                <a href="#" class="footer-link"
-                  >Enterprise<br
-                /></a>
+                <a href="#" class="footer-link">Enterprise<br /></a>
               </li>
             </ul>
           </div>
@@ -1723,9 +1599,7 @@
               </li>
               <li>
                 <a href="#" class="footer-link">Enterprise</a>
-                <a href="#" class="footer-link"
-                  >Trust Center</a
-                >
+                <a href="#" class="footer-link">Trust Center</a>
               </li>
               <li>
                 <a
@@ -1735,9 +1609,7 @@
                 >
               </li>
               <li>
-                <a href="#" class="footer-link"
-                  >Year in Review &#x27;23</a
-                >
+                <a href="#" class="footer-link">Year in Review &#x27;23</a>
               </li>
             </ul>
           </div>
@@ -1808,56 +1680,8 @@
         Copyright © 2023 FlutterFlow, Inc. All rights reserved.
       </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js" type="text/javascript"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      firebase.analytics();
-      gtag("js", new Date());
-      gtag("config", "UA-181477965-1");
-    </script>
-    <!--  [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]  -->
-    <script src="https://unpkg.com/beerslider/dist/BeerSlider.js"></script>
-    <script>
-      window.onload = function () {
-        setTimeout(function () {
-          $(".image-wrapper").each(function (index, el) {
-            let firstImage = $(this).find("img")[0].src;
-            let secondImage = $(this).find("img")[1].src;
-            let template = `
-      	<div class="beer-slider" data-beer-label="before">
-          <img src="${firstImage}">
-          <div class="beer-reveal" data-beer-label="after">
-            <img src="${secondImage}">
-          </div>
-        </div>
-      `;
-            $(this).find("img")[1].remove();
-            $(this).find("img")[0].remove();
-            $(this).append(template);
-            $.fn.BeerSlider = function (options) {
-              options = options || {};
-              return this.each(function () {
-                new BeerSlider(this, options);
-              });
-            };
-          });
-          $(".beer-slider").each(function (index, el) {
-            $(el).BeerSlider({ start: $(el).data("start") });
-          });
-        });
-      };
-    </script>
-    <style>
-      .beer-slider {
-        height: 100% !important;
-      }
-      .beer-slider,
-      .beer-slider > img {
-        width: 100% !important;
-      }
-    </style>
   </body>
 </html>

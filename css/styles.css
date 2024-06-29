@@ -1986,8 +1986,6 @@ a {
 
 .body_2022.ffdc {
     background-color: var(--white);
-    margin-top: -10px;
-    padding-top: 730px;
     padding-bottom: 60px;
 }
 
@@ -2665,7 +2663,7 @@ a {
 }
 
 .hero_imagewrapper.ph_container.ffdc {
-    padding-bottom: 400px;
+    padding-bottom: 2rem;
 }
 
 .clonetopcard {
@@ -3673,8 +3671,6 @@ a {
 
     .body_2022.ffdc {
         background-color: var(--white);
-        margin-top: -10px;
-        padding-top: 760px;
     }
 
     .tabs-menu.ffdc.reverse {
@@ -3737,7 +3733,7 @@ a {
     }
 
     .hero_imagewrapper.ph_container.ffdc {
-        padding-bottom: 370px;
+        padding-bottom: 2rem;
     }
 
     .clonable_img {
@@ -4362,9 +4358,6 @@ a {
         margin-bottom: 80px;
     }
 
-    .body_2022.ffdc {
-        padding-top: 870px;
-    }
 
     .textleft {
         text-align: left;
