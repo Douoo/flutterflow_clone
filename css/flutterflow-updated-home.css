@@ -1921,13 +1921,13 @@ a {
     display: block;
 }
 
-.hero2022 {
+.hero {
     border-radius: 8px;
     width: 1270px;
     padding-top: 0;
 }
 
-.hero2022.overlay_1 {
+.hero.overlay_1 {
     z-index: 10;
     padding-top: 0;
     padding-left: 0;
@@ -1938,7 +1938,7 @@ a {
     right: 0%;
 }
 
-.hero2022.absolute {
+.hero.absolute {
     margin-left: 0;
     position: relative;
     top: 20%;
@@ -3655,7 +3655,7 @@ a {
         display: flex;
     }
 
-    .hero2022 {
+    .hero {
         padding-top: 0;
     }
 
@@ -4317,14 +4317,14 @@ a {
         padding-bottom: 10px;
     }
 
-    .hero2022 {
+    .hero {
         border-radius: 8px;
         width: 100%;
         max-width: none;
         display: inline-block;
     }
 
-    .hero2022.overlay_1 {
+    .hero.overlay_1 {
         z-index: 6;
         padding-top: 4px;
         padding-left: 5px;
@@ -4335,7 +4335,7 @@ a {
         right: auto;
     }
 
-    .hero2022.absolute {
+    .hero.absolute {
         margin-left: 0;
         position: relative;
         top: 0%;
@@ -5240,7 +5240,7 @@ a {
         position: relative;
     }
 
-    .hero2022 {
+    .hero {
         text-align: center;
         border-radius: 12px;
         flex: 0 auto;
@@ -7889,7 +7889,7 @@ a {
         padding-right: 10px;
     }
 
-    .hero2022 {
+    .hero {
         border-radius: 4px;
     }
 
