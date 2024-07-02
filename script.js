@@ -1,4 +1,3 @@
-console.log("jflskjflksjflskjfkl");
 const navMenu = document.querySelector(".nav-menu");
 
 navMenu.addEventListener("click", () => {
@@ -41,32 +40,47 @@ function getParentByClass(childElement, className) {
   }
   return parent;
 }
-const swiper = new Swiper(".swiper", {
-  // Optional parameters
-  // direction: "vertical",
-  slidesPerView: 3,
-  loop: true,
+let isMobileOrTablet;
+function detectMediaQuerySize() {
+  const mediaQuery = window.matchMedia("(max-width: 968px)"); // Adjust breakpoint as needed
+  isMobileOrTablet = mediaQuery.matches; // True if screen size matches the query
 
-  // If we need pagination
-  pagination: {
-    el: ".slider-pagination",
-  },
+  const swiper = new Swiper(".swiper", {
+    // Optional parameters
+    // direction: "vertical",
+    // direction: isMobileOrTablet ? "vertical" : "horizontal",
+    slidesPerView: isMobileOrTablet ? 1 : 3,
+    loop: true,
 
-  // Navigation arrows
-  navigation: {
-    nextEl: ".next-slide",
-    prevEl: ".prev-slide",
-  },
+    // If we need pagination
+    pagination: {
+      el: ".slider-pagination",
+    },
 
-  // And if we need scrollbar
-  scrollbar: {
-    el: ".swiper-scrollbar",
-  },
-});
+    // Navigation arrows
+    navigation: {
+      nextEl: ".next-slide",
+      prevEl: ".prev-slide",
+    },
+
+    // And if we need scrollbar
+    scrollbar: {
+      el: ".swiper-scrollbar",
+    },
+  });
+}
+detectMediaQuerySize();
+window.addEventListener("resize", detectMediaQuerySize);
 
 const testimonialsSwipe = new Swiper(".testimonials", {
   // Optional parameters
-  // direction: "vertical",
+  // direction: isMobileOrTablet ? "vertical" : "horizontal",
+  breakpoints: {
+    // Set direction to vertical on screens below 1024px (mobile and tablet)
+    1000: {
+      direction: "vertical",
+    },
+  },
   slidesPerView: 1,
   loop: true,
 
@@ -92,7 +106,6 @@ let bottomNav = document.querySelector(".bottom-nav");
 
 let bottomPriceNav = document.querySelector(".bottom-price-nav");
 
-
 menu.onClick = () => {};
 menu.addEventListener("click", () => {
   menu.classList.toggle("ri-menu-fill");
@@ -101,5 +114,4 @@ menu.addEventListener("click", () => {
   if (document.body.contains(document.querySelector(".bottom-nav"))) {
     bottomNav.classList.toggle("open");
   } else bottomPriceNav.classList.toggle("open");
-
 });

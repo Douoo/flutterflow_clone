@@ -2454,9 +2454,15 @@ a {
   right: auto;
 }
 
-.slide-nav.showcase.reviews {
+/* .slide-nav.showcase.reviews {
   margin-left: 5%;
 }
+
+@media(max-width:968px) {
+  slide-nav.showcase.reviews {
+    margin-left: 0 !important;
+  }
+} */
 
 .slide-nav.showcase.reviews.custom {
   padding-bottom: 20px;
