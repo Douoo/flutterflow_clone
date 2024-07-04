@@ -434,7 +434,7 @@ label {
 }
 
 .w-slider-nav {
-  position: absolute;
+  /* position: absolute; */
   z-index: 2;
   top: auto;
   right: 0;
