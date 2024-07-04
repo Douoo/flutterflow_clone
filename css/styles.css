@@ -2388,6 +2388,14 @@ a {
   right: auto;
 }
 
+.d-block {
+  display: block;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
 .content-image-cover {
   object-fit: cover;
   border-radius: 20px;

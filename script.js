@@ -71,12 +71,6 @@ window.addEventListener("resize", detectMediaQuerySize);
 const testimonialsSwipe = new Swiper(".testimonials", {
   // Optional parameters
   // direction: isMobileOrTablet ? "vertical" : "horizontal",
-  breakpoints: {
-    // Set direction to vertical on screens below 1024px (mobile and tablet)
-    1000: {
-      direction: "vertical",
-    },
-  },
   slidesPerView: 1,
   loop: true,
 
